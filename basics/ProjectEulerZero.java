@@ -10,17 +10,18 @@ and the sum of the odd squares is 35.
 Among the first 821 thousand square numbers, what is the sum of all the odd squares?
 */
 
-//key insight is that all odd numbers will yield an odd square number, because no odd number can have 2 as one of its prime factors
-//so no odd square number can have 2 as one of its prime factors
+//key insight is that every odd number will yield an odd square number, because no odd number can have 2 as one of its prime factors
+//so every square of an odd number does not have 2 as one of its prime factors, meaning that it is an odd square number
+//and no square of an even number can be an odd square because it will have 2 as one of its prime factors
 
 package basics;
 
 public class ProjectEulerZero {
     public static void main(String[] args){
-        double count = 0; //keeps track of final amount
-        for(int i = 1; i<=821000; i+=2){ //loops through the first 821000 numbers, counting only the odds
-            count+=i*i;
+        long amount = 0; //keeps track of final amount
+        for(long i = 1; i<=821000; i+=2){ //loops over the first 821000 positive integers, counting every odd number
+            amount+=i*i; //multiply root by itself and add the product to amount
         }
-        System.out.println(count);
+        System.out.println(amount);
     }
 }
