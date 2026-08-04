@@ -17,14 +17,14 @@ public class ProjectEulerThree {
     //returns true if it has no factors i.e. is a prime number, false otherwise
     public static boolean primeChecker(double number){
         double squareRoot = Math.floor(Math.sqrt(number)); //round down square root
-        while(squareRoot < 1){
+        while(squareRoot > 1){
             if(number % squareRoot ==0){
                 //System.out.println(number + "is not prime, has divisor " + squareRoot);
                 return false;
             }
             squareRoot--;
         }
-        //System.out.println(number + "is prime");
+        System.out.println(number + " is prime");
         return true;
     }
     public static void main(String [] args){
@@ -34,14 +34,16 @@ public class ProjectEulerThree {
         while(numberBeingTested > 1){
             if(number%numberBeingTested == 0){
                 double otherDivisor = number/numberBeingTested; //create a variable for the other divisor
-                if(primeChecker(numberBeingTested) && numberBeingTested < otherDivisor){
+                if(primeChecker(numberBeingTested) && numberBeingTested > currentLargestPrime){
                     currentLargestPrime = numberBeingTested;
-                } else if(primeChecker(otherDivisor)){
+                } else if(primeChecker(otherDivisor) && otherDivisor > numberBeingTested){
                     currentLargestPrime = otherDivisor;
                 }
             }
             numberBeingTested-=1;
         }
-        System.out.println(currentLargestPrime);
-    }
+        System.out.println("Largest prime factor is " + currentLargestPrime);
+        }
 }
+
+//the problem is probably with my prime checker because it's claiming too many things are prime, need to test it
