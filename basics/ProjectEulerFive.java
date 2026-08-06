@@ -16,8 +16,10 @@ also it must have all of the prime factors in it
 so at a minimum it is 2*3*5*7*11*13*17*19 = 9699690
 and whatever it is will be a multiple of 9699690
 
+
 Ultimately I was stuck finding a solution to this problem by naive testing. So instead I just identified the prime factors of every number
-from 1 - 20 and identified the number that included all of the unique prime factors, which is 232792560
+from 1 - 20 and identified the number that included all of the unique prime factors, which is 232792560. I was almost there by limiting the
+search to multiples of 9699690, which is 232792560/24.
 */
 
 package basics;
@@ -27,8 +29,8 @@ public class ProjectEulerFive {
     public static void main(String[] args){
 
         int brake = 0;
-        double testNumber = 9699690; //minimum number, will count up from here
-        final double limit = 670442572800L; //limit is product of all numbers from 11 - 20
+        long testNumber = 9699690; //minimum number, will count up from here
+        final long limit = 670442572800L; //limit is product of all numbers from 11 - 20
         while(brake < 10 && testNumber <= limit){
             for(int i = 11; i<=20; i++){ //for each test number, we will check all the numbers from 11 to 20 to see if they divide evenly
                 if(testNumber % i == 0){
