@@ -6,7 +6,7 @@ What is the largest prime factor of the number 600851475143?
 
 //we could solve this by taking the square root and testing each integer below sqrt to see if it is a multiple
 
-package basics;
+package basics.ProjectEulerIToX;
 
 
 public class ProjectEulerThree {

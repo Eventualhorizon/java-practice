@@ -14,7 +14,7 @@ Among the first 821 thousand square numbers, what is the sum of all the odd squa
 //so every square of an odd number does not have 2 as one of its prime factors, meaning that it is an odd square number
 //and no square of an even number can be an odd square because it will have 2 as one of its prime factors
 
-package basics;
+package basics.ProjectEulerIToX;
 
 public class ProjectEulerZero {
     public static void main(String[] args){

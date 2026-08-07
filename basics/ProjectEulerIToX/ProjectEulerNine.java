@@ -22,7 +22,7 @@ and for any a + b we must pick c such that 1000 - (a + b) = c > = 334
 
 */
 
-package basics;
+package basics.ProjectEulerIToX;
 
 public class ProjectEulerNine {
 

@@ -22,7 +22,7 @@ from 1 - 20 and identified the number that included all of the unique prime fact
 search to multiples of 9699690, which is 232792560/24.
 */
 
-package basics;
+package basics.ProjectEulerIToX;
 
 public class ProjectEulerFive {
     

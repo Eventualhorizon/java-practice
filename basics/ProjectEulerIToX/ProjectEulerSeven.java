@@ -10,7 +10,7 @@ Fast way to test a number to see if it is prime:
 All prime numbers must be in the form 30n + 1, 30 n + 7, 30n + 11, 30n + 13, 30n + 17, 30n + 19, 30n + 23, or 30n + 29
  */
 
-package basics;
+package basics.ProjectEulerIToX;
 
 public class ProjectEulerSeven {
 
