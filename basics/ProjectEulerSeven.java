@@ -16,7 +16,11 @@ public class ProjectEulerSeven {
 
     //all primes must be in the form 30n + 1, 30 n + 7, 30n + 11, 30n + 13, 30n + 17, 30n + 19, 30n + 23, or 30n + 29
     //test each number to determine if it is in this form, and if it is use sieve of eratosthenes
-    public static boolean primeTesterExtended(long number){
+
+    //NOTE!!!! this program does not return 2, 3, or 5 as prime. I hardcoded those into the array primeList.
+    //DO NOT REUSE: instead use primeTesterExtended from ProjectEulerTen!!!!!
+    public static boolean primeTesterExtendedDepreciated(long number){
+
         
         if(number % 30 == 1 || number % 30 == 7 || number % 30 == 11 || number % 30 == 13 || number % 30 == 17 || number % 30 == 19 || number % 30 == 23 || number % 30 == 29 ){
             double squareRoot = Math.floor(Math.sqrt(number)); //round down square root
@@ -43,7 +47,7 @@ public class ProjectEulerSeven {
 
         for(int i = 3; i < 10001; i++){
             while(primeList[i] == 0){
-                if(primeTesterExtended(potentialPrime)){
+                if(primeTesterExtendedDepreciated(potentialPrime)){
                     primeList[i] = potentialPrime;
                     potentialPrime += 2; // can count by twos because every other number will be even
                 }else{
